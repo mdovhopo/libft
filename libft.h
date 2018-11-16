@@ -16,6 +16,10 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# define TRUE 1
+# define FALSE 0
+
+typedef unsigned short int t_bool;
 
 typedef struct	s_list
 {
