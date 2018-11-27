@@ -6,7 +6,7 @@
 #    By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2018/11/11 19:26:34 by mdovhopo         ###   ########.fr        #
+#    Updated: 2018/11/27 18:44:06 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,13 +84,13 @@ SRC_C =ft_memset.c \
 
 SRC_O = $(SRC_C:.c=.o)
 
-%.o: %.c libft.a
-	@gcc $(FLAGS) -o $@ -c $<
+%.o: %.c
+	gcc $(FLAGS) -o $@ -c $<
 
 all: $(NAME)
 
 $(NAME): $(SRC_O)
-	@ar rc $(NAME) $(SRC_O)
+	ar rc $(NAME) $(SRC_O)
 clean:
 	@/bin/rm -f $(SRC_O)
 
