@@ -6,7 +6,7 @@
 #    By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2018/11/27 18:44:06 by mdovhopo         ###   ########.fr        #
+#    Updated: 2018/11/28 17:16:04 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ FLAGS = -Wall -Wextra -Werror
 
 SRC_C =ft_memset.c \
        ft_bzero.c \
+	   count_words.c \
 	   ft_memcpy.c \
 	   ft_memccpy.c \
 	   ft_memmove.c \
@@ -84,13 +85,14 @@ SRC_C =ft_memset.c \
 
 SRC_O = $(SRC_C:.c=.o)
 
-%.o: %.c
-	gcc $(FLAGS) -o $@ -c $<
-
 all: $(NAME)
 
 $(NAME): $(SRC_O)
 	ar rc $(NAME) $(SRC_O)
+
+%.o: %.c
+	gcc $(FLAGS) -o $@ -c $<
+
 clean:
 	@/bin/rm -f $(SRC_O)
 

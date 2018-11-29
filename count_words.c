@@ -1,18 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   count_words.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/27 19:21:56 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/10/31 14:56:44 by mdovhopo         ###   ########.fr       */
+/*   Created: 2018/11/28 17:38:07 by mdovhopo          #+#    #+#             */
+/*   Updated: 2018/11/28 17:38:09 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+size_t	count_words(const char *s, char c)
 {
-	return ((char *)ft_memcpy(dst, src, ft_strlen(src) + 1));
+	int		count;
+	int		i;
+	int		is_word;
+
+	if (!s)
+		return (-2);
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+			is_word = 1;
+		while (s[i] != c && s[i] != '\0')
+		{
+			if (is_word == 1)
+			{
+				count++;
+				is_word = 0;
+			}
+			i++;
+		}
+	}
+	return (count);
 }

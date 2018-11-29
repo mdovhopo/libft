@@ -50,7 +50,7 @@ static int			is_white_space(char *s)
 
 int					ft_atoi(const char *str)
 {
-	int				res;
+	long long		res;
 	int				len;
 	int				ten;
 	char			*s;
@@ -67,5 +67,5 @@ int					ft_atoi(const char *str)
 		ten *= 10;
 		len--;
 	}
-	return (res);
+	return ((int)res);
 }

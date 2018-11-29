@@ -16,10 +16,6 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-# define TRUE 1
-# define FALSE 0
-
-typedef unsigned short int t_bool;
 
 typedef struct	s_list
 {
@@ -114,5 +110,6 @@ void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 int				ft_make_coffee(int n);
+size_t			count_words(const char *s, char c);
 
 #endif

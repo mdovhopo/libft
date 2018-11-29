@@ -12,29 +12,19 @@
 
 #include "libft.h"
 
-static char	*is_null(const char *s1, const char *s2)
-{
-	if (s1 == NULL && s2 == NULL)
-		return ((char *)NULL);
-	else if (s1 == NULL)
-		return (ft_strdup(s2));
-	else
-		return (ft_strdup(s2));
-}
-
 char		*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*join;
+	char	*str1;
+	char	*str2;
 	int		i;
 	int		c_join;
-	size_t	len_s1;
-	size_t	len_s2;
 
-	if (s1 == NULL || s2 == NULL)
-		return (is_null(s1, s2));
-	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
-	join = (char *)malloc(len_s1 + len_s2 + 1);
+	if (!s1 || !s2)
+		return (NULL);
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	join = (char *)malloc(sizeof(char) * ft_strlen(str1) + ft_strlen(str2) + 1);
 	if (join)
 	{
 		c_join = 0;
