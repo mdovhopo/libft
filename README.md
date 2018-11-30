@@ -1,0 +1,3 @@
+#Libft
+
+my little libft
