@@ -29,17 +29,16 @@ char			**ft_strsplit(char const *s, char c)
 	size_t	j;
 	size_t	k;
 
-	if ((split = malloc(sizeof(char *) * count_words(s, c) + 1)) != NULL)
+	if ((split = malloc(sizeof(char *) * ft_count_words(s, c) + 1)))
 	{
 		k = 0;
 		i = 0;
-		while (i < count_words(s, c))
+		while (i < ft_count_words(s, c))
 		{
 			j = 0;
 			while (s[k] == c)
 				k++;
-			split[i] = malloc(sizeof(char) * count_char(&s[k], c) + 1);
-			if (split[i])
+			if ((split[i] = malloc(sizeof(char) * count_char(&s[k], c) + 1)))
 			{
 				while (s[k] != c && s[k] != '\0')
 					split[i][j++] = s[k++];

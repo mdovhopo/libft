@@ -110,6 +110,6 @@ void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 int				ft_make_coffee(int n);
-size_t			count_words(const char *s, char c);
+size_t			ft_count_words(const char *s, char c);
 
 #endif
