@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_new_vector3d.c                                  :+:      :+:    :+:   */
+/*   ft_new_vec3.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-t_vector3d	ft_new_vect3d(int x, int y, int z)
+t_vec3	ft_new_vec3(double x, double y, double z)
 {
-	t_vector3d vect3d;
+	t_vec3 vec;
 
-	vect3d.x = x;
-	vect3d.y = y;
-	vect3d.z = z;
-	return (vect3d);
+	vec.x = x;
+	vec.y = y;
+	vec.z = z;
+	return (vec);
 }

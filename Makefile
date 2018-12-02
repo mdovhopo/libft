@@ -74,24 +74,21 @@ SRC_C =ft_memset.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
 	   ft_make_coffee.c \
-	   ft_new_vect2d.c \
-	   ft_new_vect3d.c \
-       ft_add_vect2d.c \
-	   ft_add_vect3d.c \
-	   ft_sub_vect2d.c \
-	   ft_sub_vect3d.c \
-	   ft_rev_vect2d.c \
-	   ft_rev_vect3d.c \
+	   ft_new_vec2.c \
+	   ft_new_vec3.c \
+       ft_add_vec2.c \
+	   ft_add_vec3.c \
+	   ft_show_binary.c \
 
 SRC_O = $(SRC_C:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(SRC_O)
-	ar rc $(NAME) $(SRC_O)
+	@ar rc $(NAME) $(SRC_O)
 
 %.o: %.c
-	gcc $(FLAGS) -o $@ -c $<
+	@gcc $(FLAGS) -o $@ -c $<
 
 clean:
 	@/bin/rm -f $(SRC_O)

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_vect2d.c                                    :+:      :+:    :+:   */
+/*   ft_add_vec2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,9 +13,9 @@
 #include "libft.h"
 #include <stdio.h>
 
-t_vector2d	ft_add_vect2d(t_vector2d v1, t_vector2d v2)
+t_vec2	ft_add_vec2(t_vec2 v1, t_vec2 v2)
 {
-	t_vector2d res;
+	t_vec2 res;
 
 	res.x = v1.x + v2.x;
 	res.y = v1.y + v2.y;

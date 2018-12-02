@@ -24,27 +24,27 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-typedef struct	s_vector2d
+typedef struct	s_vec2
 {
-	int				x;
-	int				y;
-}				t_vector2d;
+	double			x;
+	double			y;
+}				t_vec2;
 
-typedef struct	s_vector3d
+typedef struct	s_vec3
 {
-	int				x;
-	int				y;
-	int				z;
-}				t_vector3d;
+	double			x;
+	double			y;
+	double			z;
+}				t_vec3;
 
-t_vector2d		ft_new_vect2d(int x, int y);
-t_vector3d		ft_new_vect3d(int x, int y, int z);
-t_vector2d		ft_add_vect2d(t_vector2d v1, t_vector2d v2);
-t_vector3d		ft_add_vect3d(t_vector3d v1, t_vector3d v2);
-t_vector2d		ft_sub_vect2d(t_vector2d v1, t_vector2d v2);
-t_vector3d		ft_sub_vect3d(t_vector3d v1, t_vector3d v2);
-void			ft_rev_vect2d(t_vector2d *v);
-void			ft_rev_vect3d(t_vector3d *v);
+t_vec2			ft_new_vec2(double x, double y);
+t_vec3			ft_new_vec3(double x, double y, double z);
+t_vec2			ft_add_vec2(t_vec2 v1, t_vec2 v2);
+t_vec3			ft_add_vec3(t_vec3 v1, t_vec3 v2);
+t_vec2			ft_sub_vec2(t_vec2 v1, t_vec2 v2);
+t_vec3			ft_sub_vec3(t_vec3 v1, t_vec3 v2);
+void			ft_rev_vec2(t_vec2 *v);
+void			ft_rev_vec3(t_vec3 *v);
 
 t_list			*ft_lstnew(void const *content, size_t content_size);
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
@@ -111,5 +111,6 @@ void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 int				ft_make_coffee(int n);
 size_t			ft_count_words(const char *s, char c);
+void			ft_show_binary(unsigned int x);
 
 #endif
