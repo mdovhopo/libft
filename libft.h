@@ -6,7 +6,7 @@
 /*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:30:39 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/11/08 15:13:58 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2018/12/03 19:49:18 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,12 @@ typedef struct	s_vec3
 	double			y;
 	double			z;
 }				t_vec3;
+
+typedef struct	s_intvec2
+{
+	int		x;
+	int		y;
+}				t_intvec2;
 
 t_vec2			ft_new_vec2(double x, double y);
 t_vec3			ft_new_vec3(double x, double y, double z);
@@ -112,5 +118,6 @@ void			ft_putnbr_fd(int n, int fd);
 int				ft_make_coffee(int n);
 size_t			ft_count_words(const char *s, char c);
 void			ft_show_binary(unsigned int x);
+t_intvec2		ft_new_intvec2(int x, int y);
 
 #endif

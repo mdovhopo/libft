@@ -6,7 +6,7 @@
 #    By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2018/11/28 17:16:04 by mdovhopo         ###   ########.fr        #
+#    Updated: 2018/12/04 17:41:24 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,7 @@ SRC_C =ft_memset.c \
 	   ft_new_vec3.c \
        ft_add_vec2.c \
 	   ft_add_vec3.c \
+	   ft_new_intvec2.c \
 	   ft_show_binary.c \
 
 SRC_O = $(SRC_C:.c=.o)
