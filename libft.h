@@ -16,6 +16,22 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# define END_IS_ENDL(x) (x == '\n' ? 1 : 0)
+# define END_IS_NULL(x) (x == '\0' ? 1 : 0)
+# define STOP_READING break ;
+# define CHECK_ERRORS(fd ,line, buff) (fd < 0 || !line || read(fd, buff, 0) < 0)
+# define CHECK_IF_EXIT(d, f_ch, r_b) ((d == NULL || f_ch == '\0') && r_b == 0)
+# define ERROR -1
+# define SUCCESS_END 0
+# define BUFF_SIZE 16
+
+typedef struct	s_gnl
+{
+	int				fd;
+	char			*data;
+	struct s_gnl	*next;
+}				t_gnl;
 
 typedef struct	s_list
 {
@@ -43,7 +59,9 @@ typedef struct	s_intvec2
 	int		y;
 }				t_intvec2;
 
-t_vec2			ft_new_vec2(double x, double y);
+typedef unsigned int		t_uint;
+
+t_vec2			ft_vec2(double x, double y);
 t_vec3			ft_new_vec3(double x, double y, double z);
 t_vec2			ft_add_vec2(t_vec2 v1, t_vec2 v2);
 t_vec3			ft_add_vec3(t_vec3 v1, t_vec3 v2);
@@ -52,6 +70,7 @@ t_vec3			ft_sub_vec3(t_vec3 v1, t_vec3 v2);
 void			ft_rev_vec2(t_vec2 *v);
 void			ft_rev_vec3(t_vec3 *v);
 
+int				get_next_line(const int fd, char **line);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void			ft_lstdelone(t_list **alst,
@@ -119,5 +138,6 @@ int				ft_make_coffee(int n);
 size_t			ft_count_words(const char *s, char c);
 void			ft_show_binary(unsigned int x);
 t_intvec2		ft_new_intvec2(int x, int y);
+int				ft_atoi16(const char *s);
 
 #endif

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_vec2.c                                      :+:      :+:    :+:   */
+/*   ft_vec2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 14:10:51 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/12/06 17:38:30 by mdovhopo         ###   ########.fr       */
+/*   Created: 2018/11/08 14:00:32 by mdovhopo          #+#    #+#             */
+/*   Updated: 2018/11/08 14:07:24 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-t_vec2	ft_add_vec2(t_vec2 v1, t_vec2 v2)
+t_vec2	ft_vec2(double x, double y)
 {
-	t_vec2 res;
+	t_vec2 vec;
 
-	res.x = v1.x + v2.x;
-	res.y = v1.y + v2.y;
-	return (res);
+	vec.x = x;
+	vec.y = y;
+	return (vec);
 }

@@ -6,7 +6,7 @@
 #    By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2018/12/04 17:41:24 by mdovhopo         ###   ########.fr        #
+#    Updated: 2018/12/04 19:38:10 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,23 +74,28 @@ SRC_C =ft_memset.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
 	   ft_make_coffee.c \
-	   ft_new_vec2.c \
+	   ft_vec2.c \
 	   ft_new_vec3.c \
        ft_add_vec2.c \
 	   ft_add_vec3.c \
 	   ft_new_intvec2.c \
 	   ft_show_binary.c \
+	   ft_atoi16.c \
+	   get_next_line.c \
 
 SRC_O = $(SRC_C:.c=.o)
+
+CC = clang
 
 all: $(NAME)
 
 $(NAME): $(SRC_O)
 	@ar rc $(NAME) $(SRC_O)
-	@echo "$(NAME) Has been created."
+	@echo "\033[92m[$(NAME) Has been created.]\033[0m"
 
 %.o: %.c
-	@gcc $(FLAGS) -o $@ -c $<
+	@echo "[Compiling] $@"
+	@$(CC) $(FLAGS) -o $@ -c $<
 
 clean:
 	@/bin/rm -f $(SRC_O)
