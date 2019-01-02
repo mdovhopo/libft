@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_map.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/27 14:12:57 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/10/29 19:30:25 by mdovhopo         ###   ########.fr       */
+/*   Created: 2018/12/09 17:08:28 by mdovhopo          #+#    #+#             */
+/*   Updated: 2018/12/09 17:08:29 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	size_t			i;
-	unsigned char	*d1;
-	unsigned char	*s1;
+/*
+** transforms value s from range a.x - a.y to value
+** (witch returns) to range b.x - b.y
+*/
 
-	i = 0;
-	d1 = (unsigned char *)dst;
-	s1 = (unsigned char *)src;
-	while (i < n)
-	{
-		d1[i] = s1[i];
-		i++;
-	}
-	return (dst);
+double	ft_map(double s, t_vec2 a, t_vec2 b)
+{
+	return (b.x + (s - a.x) * (b.y - b.x) / (a.y - a.x));
 }

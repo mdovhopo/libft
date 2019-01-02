@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_rgb.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/27 14:12:57 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/10/29 19:30:25 by mdovhopo         ###   ########.fr       */
+/*   Created: 2018/12/23 18:16:15 by mdovhopo          #+#    #+#             */
+/*   Updated: 2018/12/23 18:16:16 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*
+** returns color code from passing r g b values
+*/
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int		ft_rgb(int r, int g, int b)
 {
-	size_t			i;
-	unsigned char	*d1;
-	unsigned char	*s1;
-
-	i = 0;
-	d1 = (unsigned char *)dst;
-	s1 = (unsigned char *)src;
-	while (i < n)
-	{
-		d1[i] = s1[i];
-		i++;
-	}
-	return (dst);
+	return (r * 65536 + g * 256 + b);
 }
