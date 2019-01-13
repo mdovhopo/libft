@@ -6,7 +6,7 @@
 /*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:30:39 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/12/03 19:49:18 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/01/13 17:21:55 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,15 +70,12 @@ typedef struct	s_intvec2
 
 typedef unsigned int		t_uint;
 
-t_vec2			ft_vec2(double x, double y);
-t_vec3			ft_new_vec3(double x, double y, double z);
 t_vec2			ft_add_vec2(t_vec2 v1, t_vec2 v2);
 t_vec3			ft_add_vec3(t_vec3 v1, t_vec3 v2);
 t_vec2			ft_sub_vec2(t_vec2 v1, t_vec2 v2);
 t_vec3			ft_sub_vec3(t_vec3 v1, t_vec3 v2);
 void			ft_rev_vec2(t_vec2 *v);
 void			ft_rev_vec3(t_vec3 *v);
-t_intvec2		ft_new_intvec2(int x, int y);
 
 /*
 ** dealing with lists

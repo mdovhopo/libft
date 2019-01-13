@@ -6,7 +6,7 @@
 #    By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2018/12/04 19:38:10 by mdovhopo         ###   ########.fr        #
+#    Updated: 2019/01/13 17:21:27 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,11 +74,8 @@ SRC_C =ft_memset.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
 	   ft_make_coffee.c \
-	   ft_vec2.c \
-	   ft_new_vec3.c \
        ft_add_vec2.c \
 	   ft_add_vec3.c \
-	   ft_new_intvec2.c \
 	   ft_show_binary.c \
 	   ft_atoi16.c \
 	   get_next_line.c \
