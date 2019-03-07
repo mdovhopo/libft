@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:19:43 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/11/12 20:04:09 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/03/07 13:15:24 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static t_gnl	*lst_new(int fd)
 {
 	t_gnl	*new_lst;
 
-	new_lst = (t_gnl *)malloc(sizeof(t_list));
+	new_lst = (t_gnl *)malloc(sizeof(t_gnl));
 	if (new_lst)
 	{
 		new_lst->data = ft_strnew(1);

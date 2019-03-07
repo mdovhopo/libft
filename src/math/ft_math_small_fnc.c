@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_vec2.c                                      :+:      :+:    :+:   */
+/*   ft_math_small_fnc.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 14:10:51 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/12/06 17:38:30 by mdovhopo         ###   ########.fr       */
+/*   Created: 2019/03/07 13:48:41 by mdovhopo          #+#    #+#             */
+/*   Updated: 2019/03/07 13:58:29 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "mathft.h"
 
-t_vec2	ft_add_vec2(t_vec2 v1, t_vec2 v2)
+float	clamp(float lo, float hi, float v)
 {
-	t_vec2 res;
+	return (fmax(lo, fmin(hi, v)));
+}
 
-	res.x = v1.x + v2.x;
-	res.y = v1.y + v2.y;
-	return (res);
+float	mix(float a, float b, float mix)
+{
+	return (b * mix + a * (1 - mix));
 }
