@@ -6,11 +6,26 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:26:03 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/07 13:31:33 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/03/08 12:21:24 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathft.h"
+
+t_vec	vec_mult_vec(t_vec v1, t_vec v2)
+{
+	return ((t_vec){v1.x * v2.x, v1.y * v2.y, v1.z * v2.z});
+}
+
+t_vec	vec_add_vec(t_vec v1, t_vec v2)
+{
+	return ((t_vec){v1.x + v2.x, v1.y + v2.y, v1.z + v2.z});
+}
+
+t_vec	vec_sub_vec(t_vec v1, t_vec v2)
+{
+	return ((t_vec){v1.x - v2.x, v1.y - v2.y, v1.z - v2.z});
+}
 
 /*
 ** same as normilizing vector
@@ -21,17 +36,10 @@ t_vec	vec_unit(t_vec v)
 	return (vec_mult(v, 1 / sqrt(vec_dot(v, v))));
 }
 
-float	vec_mag(t_vec v)
+t_vec vec_clamp(float lo, float hi, t_vec v)
 {
-	return (sqrt(vec_dot(v, v)));
-}
-
-/*
-** for comparing vectors magnitude.
-** it performs better because you don't do sqrt
-*/
-
-float	vec_mag_squared(t_vec v)
-{
-	return (vec_dot(v, v));
+	v.x = clamp(lo, hi, v.x);
+	v.y = clamp(lo, hi, v.y);
+	v.z = clamp(lo, hi, v.z);
+	return (v);
 }
