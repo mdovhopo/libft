@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/11 16:07:02 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/03/13 19:20:12 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,15 @@
 
 # include <math.h>
 
-#ifndef M_PI_180
-# define M_PI_180 0.01745329251
-#endif
+/*
+** "constructor" for t_vec object
+*/
+
+# define VEC(x, y, z) ((t_vec){x, y, z})
+
+# ifndef M_PI_180
+#  define M_PI_180 0.01745329251
+# endif
 
 typedef struct	s_vec
 {
@@ -70,7 +76,7 @@ float			vec_mag(t_vec v);
 float			vec_mag_squared(t_vec v);
 
 float			clamp(float lo, float hi, float v);
-int				solve_qudric(t_vec params, float *x1, float *x2);
+t_vec			ft_solve_qudric(t_vec params);
 float			mix(float a, float b, float mix);
 
 #endif

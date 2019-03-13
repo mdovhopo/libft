@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:51:16 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/07 13:56:47 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/03/13 19:21:01 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,23 @@
 
 /*
 ** use VEC(a, b, c) to pass params to func
-** returns 0 if quadric discr < 0
+** if quadric doesnt have solutions
+** VEC(0, 0, -1) returns otherwise,
+** VEC(x1, x2, 1)
 */
 
-int		solve_qudric(t_vec params, float *x0, float *x1)
+t_vec		ft_solve_qudric(t_vec params)
 {
-	float discr;
-	float q;
+	float	disc;
+	float	a;
+	float	b;
+	float	c;
 
-	discr = params.y * params.y - 4 * params.x * params.z;
-	if (discr < 0)
-		return (0);
-	else if (discr == 0)
-	{
-		*x0 = -0.5 * params.y / params.x;
-		*x1 = *x1;
-	}
-	else
-	{
-		q = (params.y > 0) ? -0.5 * (params.y + sqrt(discr)) :
-							-0.5 * (params.y - sqrt(discr));
-		*x0 = q / params.x;
-		*x1 = params.z / q;
-	}
-	return (1);
+	a = params.x;
+	b = params.y;
+	c = params.z;
+	disc = b * b - 4 * a * c;
+	if (disc < 0)
+		return (VEC(0, 0, -1));
+	return (VEC((-b + sqrt(disc)) / (2 * a), (-b - sqrt(disc)) / (2 * a), 1));
 }

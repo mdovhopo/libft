@@ -6,7 +6,7 @@
 #    By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2019/03/08 12:23:25 by mdovhopo         ###   ########.fr        #
+#    Updated: 2019/03/13 13:21:38 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC_C = $(addprefix ./$(SRC_DIR)/, $(addprefix $(STRING_SRC_DIR)/, ft_isalpha.c 
 																   ft_isalnum.c \
 																   ft_isascii.c \
 																   ft_isprint.c \
+																   ft_is_wspace.c \
 																   ft_toupper.c \
 																   ft_tolower.c \
 																   ft_itoa.c \

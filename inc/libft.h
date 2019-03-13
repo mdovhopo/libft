@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:30:39 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/07 13:28:55 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/03/13 13:21:20 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+int				ft_is_wspace(int c);
 
 #endif

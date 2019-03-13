@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:26:03 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/08 12:21:24 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/03/13 19:21:07 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_vec	vec_unit(t_vec v)
 	return (vec_mult(v, 1 / sqrt(vec_dot(v, v))));
 }
 
-t_vec vec_clamp(float lo, float hi, t_vec v)
+t_vec	vec_clamp(float lo, float hi, t_vec v)
 {
 	v.x = clamp(lo, hi, v.x);
 	v.y = clamp(lo, hi, v.y);
