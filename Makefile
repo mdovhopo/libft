@@ -6,13 +6,11 @@
 #    By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2019/03/13 13:21:38 by mdovhopo         ###   ########.fr        #
+#    Updated: 2019/03/15 14:22:30 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-BIN_DIR = bin
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -94,10 +92,10 @@ SRC_O = $(SRC_C:.c=.o)
 
 CC = clang
 
-all: $(BIN_DIR)/$(NAME)
+all: $(NAME)
 
-$(BIN_DIR)/$(NAME): $(SRC_O)
-	@ar rc $(BIN_DIR)/$(NAME) $(SRC_O)
+$(NAME): $(SRC_O)
+	@ar rc $(NAME) $(SRC_O)
 	@echo "\033[92m[$(NAME) Has been created.]\033[0m"
 
 %.o: %.c
@@ -108,6 +106,6 @@ clean:
 	@/bin/rm -f $(SRC_O)
 
 fclean: clean
-	@/bin/rm -f $(BIN_DIR)/$(NAME)
+	@/bin/rm -f $(NAME)
 
 re:	fclean all
