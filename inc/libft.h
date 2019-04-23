@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:30:39 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/13 13:21:20 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/04/23 16:20:39 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 
 # include "gnl.h"
 # include "mathft.h"
+
+/*
+** tests for not NULL malloc return
+*/
+
+# define MLC_TEST(test, msg) if (!(test)) { ft_putendl(msg); exit(-1); }
 
 /*
 ** dealing with memory
