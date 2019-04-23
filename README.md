@@ -8,7 +8,7 @@ Project written for macOS High Sierra 10.13.3 and compiled with clang++ Apple LL
 ----
 ## Installation
 
-    git clone https://github.com/mdovhopo/RTv1_CPP.git
+    git clone https://github.com/mdovhopo/libft
 
 ----
 ## Compilation
