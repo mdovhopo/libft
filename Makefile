@@ -6,7 +6,7 @@
 #    By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2019/03/15 14:22:30 by mdovhopo         ###   ########.fr        #
+#    Updated: 2019/05/11 15:05:48 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,10 +81,7 @@ SRC_C = $(addprefix ./$(SRC_DIR)/, $(addprefix $(STRING_SRC_DIR)/, ft_isalpha.c 
 																   ft_putnbr_fd.c ) \
 									$(addprefix $(MATH_SRC_DIR)/,  ft_show_binary.c \
 																   ft_map.c \
-																   ft_rgb.c \
-																   ft_vectors_part_1.c \
-																   ft_vectors_part_2.c \
-																   ft_vectors_part_3.c \
+																   ft_vectors.c \
 																   ft_math_small_fnc.c \
 																   ft_solve_quadric.c ) )
 

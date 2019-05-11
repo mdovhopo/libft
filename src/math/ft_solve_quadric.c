@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:51:16 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/13 19:21:01 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/05/11 14:54:51 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ t_vec		ft_solve_qudric(t_vec params)
 	float	b;
 	float	c;
 
-	a = params.x;
-	b = params.y;
-	c = params.z;
+	a = params[X];
+	b = params[Y];
+	c = params[Z];
 	disc = b * b - 4 * a * c;
 	if (disc < 0)
 		return (VEC(0, 0, -1));
