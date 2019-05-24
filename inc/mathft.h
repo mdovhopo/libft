@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 14:38:17 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/05/24 16:38:12 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,13 @@ typedef enum	e_axis
 	A = 3
 }				t_axis;
 
-typedef double	t_vec __attribute__((vector_size(32), aligned));
+typedef	double __attribute__((vector_size(32)))	t_vec;
 
 typedef union	u_color
 {
 	uint32_t	c;
 	t_vec		argb;
 }				t_color;
-
-// typedef struct	s_vec
-// {
-// 	double x;
-// 	double y;
-// 	double z;
-// }				t_vec;
 
 void			ft_show_binary(unsigned int x);
 
