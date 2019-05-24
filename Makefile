@@ -6,7 +6,7 @@
 #    By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2019/05/24 14:48:49 by mdovhopo         ###   ########.fr        #
+#    Updated: 2019/05/24 16:41:47 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,6 +103,11 @@ SRC_O = $(SRC_C:.c=.o)
 
 CC = clang
 
+.PHONY: all multi
+
+multi:
+	@$(MAKE) -j8 all
+
 all: $(NAME)
 
 $(NAME): $(SRC_O)
@@ -120,4 +125,4 @@ clean:
 fclean: clean
 	@/bin/rm -f $(NAME)
 
-re:	fclean all
+re:	fclean multi
