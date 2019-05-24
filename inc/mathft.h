@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/11 15:09:19 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/05/24 14:38:17 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define MATHFT_H
 
 # include <math.h>
-#include <stdint.h>
+# include <stdint.h>
 
 /*
 ** "constructor" for t_vec object
@@ -62,23 +62,23 @@ double			ft_map(double s, t_vec a, t_vec b);
 ** vector calculations
 */
 
-inline double	vec_dot(t_vec v1, t_vec v2);
-inline t_vec	vec_cross(t_vec v1, t_vec v2);
-inline t_vec	vec_clamp(float lo, float hi, t_vec v);
-inline double	vec_mag(t_vec v);
+double			vec_dot(t_vec v1, t_vec v2);
+t_vec			vec_cross(t_vec v1, t_vec v2);
+t_vec			vec_clamp(float lo, float hi, t_vec v);
+double			vec_mag(t_vec v);
 
 /*
 ** same as normilizing vector
 */
 
-inline t_vec	vec_unit(t_vec v);
+t_vec			vec_unit(t_vec v);
 
 /*
 ** for comparing vectors magnitude.
 ** it performs better because you won't use sqrt
 */
 
-inline double	vec_mag_squared(t_vec v);
+double			vec_mag_squared(t_vec v);
 
 float			clamp(float lo, float hi, float v);
 t_vec			ft_solve_qudric(t_vec params);

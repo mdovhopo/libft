@@ -6,18 +6,18 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:48:41 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/11 14:51:59 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/05/24 14:41:08 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathft.h"
 
-inline float	clamp(float lo, float hi, float v)
+float	clamp(float lo, float hi, float v)
 {
 	return (fmax(lo, fmin(hi, v)));
 }
 
-inline t_vec	vec_clamp(float lo, float hi, t_vec v)
+t_vec	vec_clamp(float lo, float hi, t_vec v)
 {
 	return ((t_vec){
 		clamp(lo, hi, v[X]),
@@ -27,7 +27,7 @@ inline t_vec	vec_clamp(float lo, float hi, t_vec v)
 	});
 }
 
-inline float	mix(float a, float b, float mix)
+float	mix(float a, float b, float mix)
 {
 	return (b * mix + a * (1 - mix));
 }

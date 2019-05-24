@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:45 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/07 13:10:29 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/05/24 13:50:10 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct	s_gnl
 
 /*
 ** reads 1 line from fd per call and asign line to **line
-** @return: 1 - if line was readed
+** @return: 1 - if line was read
 **			0 - if file ended
 **			-1 - on error
 */

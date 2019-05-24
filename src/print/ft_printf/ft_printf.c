@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_map.c                                           :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/09 17:08:28 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 14:40:45 by mdovhopo         ###   ########.fr       */
+/*   Created: 2018/12/20 17:21:19 by mdovhopo          #+#    #+#             */
+/*   Updated: 2019/05/24 14:48:48 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** transforms value s from range a[X] - a[Y] to value
-** (witch returns) to range b[X] - b[Y]
-*/
-
-double	ft_map(double s, t_vec a, t_vec b)
+int		ft_printf(const char *fmt, ...)
 {
-	return (b[X] + (s - a[X]) * (b[Y] - b[X]) / (a[Y] - a[Y]));
+	va_list		ap;
+	int			length;
+
+	va_start(ap, fmt);
+	length = print_format((char*)fmt, &ap);
+	va_end(ap);
+	return (length);
 }

@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_map.c                                           :+:      :+:    :+:   */
+/*   print_format.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/09 17:08:28 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 14:40:45 by mdovhopo         ###   ########.fr       */
+/*   Created: 2019/05/14 15:32:45 by mdovhopo          #+#    #+#             */
+/*   Updated: 2019/05/24 14:48:48 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** transforms value s from range a[X] - a[Y] to value
-** (witch returns) to range b[X] - b[Y]
-*/
-
-double	ft_map(double s, t_vec a, t_vec b)
+uint32_t	print_format(char *str, va_list *ap)
 {
-	return (b[X] + (s - a[X]) * (b[Y] - b[X]) / (a[Y] - a[Y]));
+	t_token	*token;
+	size_t	len;
+
+	len = 0;
+	token = (t_token*)ft_memalloc(sizeof(token));
+	token->str = str;
+	token->prec = -1;
+	while (*token->str)
+	{
+		if (*token->str == '%')
+		{
+			parse_format(token);
+			len += handle_token(token, ap);
+			continue ;
+		}
+		ft_putchar(*token->str);
+		token->str++;
+		len++;
+	}
+	len += 0;
+	free(token);
+	return (len);
 }
