@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:45 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 16:12:37 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/05/26 13:56:33 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # define END_IS_ENDL(x) (x == '\n' ? 1 : 0)
 # define END_IS_NULL(x) (x == '\0' ? 1 : 0)
-# define STOP_READING break ;
 # define CHECK_ERRORS(fd ,line, buff) (fd < 0 || !line || read(fd, buff, 0) < 0)
 # define CHECK_IF_EXIT(d, f_ch, r_b) ((d == NULL || f_ch == '\0') && r_b == 0)
 # define ERROR -1

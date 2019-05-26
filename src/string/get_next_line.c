@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:19:43 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/03/07 13:15:24 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/05/26 13:56:43 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int				get_next_line(const int fd, char **line)
 		free(curr_fd->data);
 		curr_fd->data = tmp;
 		if (ft_strchr(buffer, '\n'))
-			STOP_READING;
+			break ;
 	}
 	if (CHECK_IF_EXIT(curr_fd->data, curr_fd->data[0], read_bytes))
 		return (SUCCESS_END);
