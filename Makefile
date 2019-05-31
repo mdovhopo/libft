@@ -6,7 +6,7 @@
 #    By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2019/05/26 14:04:53 by mdovhopo         ###   ########.fr        #
+#    Updated: 2019/05/31 16:09:17 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ MATH_SRC_DIR	=	./$(SRC_DIR)/math
 PRINT_SRC_DIR	=	./$(SRC_DIR)/print
 FT_PRINTF_SRC_DIR = ./$(PRINT_SRC_DIR)/ft_printf
 
-SRC_C = $(addprefix $(MATH_SRC_DIR)/,	ft_map.c ft_vectors.c ft_math_small_fnc.c ft_solve_quadric.c ) \
+SRC_C = $(addprefix $(MATH_SRC_DIR)/,	ft_map.c ft_vectors.c ft_math_small_fnc.c ft_solve_quadric.c ft_rand.c) \
 		$(addprefix $(STRING_SRC_DIR)/,	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 										ft_is_wspace.c ft_toupper.c ft_tolower.c ft_itoa.c ft_atoi16.c \
 										ft_bzero.c ft_count_words.c ft_atoi.c ft_memset.c ft_memalloc.c \

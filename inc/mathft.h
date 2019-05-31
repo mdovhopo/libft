@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 16:38:12 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/05/31 16:18:44 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,12 @@ double			vec_mag_squared(t_vec v);
 float			clamp(float lo, float hi, float v);
 t_vec			ft_solve_qudric(t_vec params);
 float			mix(float a, float b, float mix);
+
+/*
+** random number generation
+*/
+
+float	ft_rand(void);
+int		ft_rand_range(int lo, int hi);
 
 #endif
