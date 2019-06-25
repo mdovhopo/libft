@@ -49,9 +49,11 @@ CC = clang
 .PHONY: all multi
 
 multi:
-	@$(MAKE) -j8 all
+	@$(MAKE) -s -j8 all
 
 all: $(NAME)
+	@echo "\033[92m[$(NAME) done]\033[0m"
+
 
 $(NAME): $(SRC_O)
 	@ar rc $(NAME) $(SRC_O)

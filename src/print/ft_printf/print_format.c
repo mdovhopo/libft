@@ -18,7 +18,7 @@ uint32_t	print_format(char *str, va_list *ap)
 	size_t	len;
 
 	len = 0;
-	token = (t_token*)ft_memalloc(sizeof(token));
+	token = (t_token*)ft_memalloc(sizeof(t_token));
 	token->str = str;
 	token->prec = -1;
 	while (*token->str)
