@@ -12,14 +12,14 @@
 
 #include "mathft.h"
 
-double	vec_dot(t_vec v1, t_vec v2)
+float	vec_dot(vec4 v1, vec4 v2)
 {
 	return (v1[X] * v2[X] + v1[Y] * v2[Y] + v1[Z] * v2[Z]);
 }
 
-t_vec	vec_cross(t_vec v1, t_vec v2)
+vec4	vec_cross(vec4 v1, vec4 v2)
 {
-	return ((t_vec){v1[Y] * v2[Z] - v1[Z] * v2[Y],
+	return ((vec4){v1[Y] * v2[Z] - v1[Z] * v2[Y],
 					v1[Z] * v2[X] - v1[X] * v2[Z],
 					v1[X] * v2[Y] - v1[Y] * v2[X]});
 }
@@ -28,9 +28,9 @@ t_vec	vec_cross(t_vec v1, t_vec v2)
 ** same as normilizing vector
 */
 
-t_vec	vec_unit(t_vec v)
+vec4	vec_unit(vec4 v)
 {
-	return ((t_vec){
+	return ((vec4){
 		v[X] * (1 / sqrt(vec_dot(v, v))),
 		v[Y] * (1 / sqrt(vec_dot(v, v))),
 		v[Z] * (1 / sqrt(vec_dot(v, v))),
@@ -38,7 +38,7 @@ t_vec	vec_unit(t_vec v)
 	});
 }
 
-double	vec_mag(t_vec v)
+float	vec_mag(vec4 v)
 {
 	return (sqrt(vec_dot(v, v)));
 }
@@ -48,7 +48,7 @@ double	vec_mag(t_vec v)
 ** it performs better because you don't do sqrt
 */
 
-double	vec_mag_squared(t_vec v)
+float	vec_mag_squared(vec4 v)
 {
 	return (vec_dot(v, v));
 }

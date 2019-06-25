@@ -103,4 +103,11 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 int				ft_is_wspace(int c);
 
+/*
+** dealing with files
+*/
+
+ssize_t			ft_get_file_size(const char *path);
+char			*ft_read_file(const char *path);
+
 #endif

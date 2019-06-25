@@ -17,7 +17,7 @@
 ** (witch returns) to range b[X] - b[Y]
 */
 
-double	ft_map(double s, t_vec a, t_vec b)
+float	ft_map(float s, vec4 a, vec4 b)
 {
 	return (b[X] + (s - a[X]) * (b[Y] - b[X]) / (a[Y] - a[Y]));
 }

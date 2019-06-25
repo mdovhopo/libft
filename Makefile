@@ -32,7 +32,8 @@ SRC_C = $(addprefix $(MATH_SRC_DIR)/,	ft_map.c ft_vectors.c ft_math_small_fnc.c 
 										ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strsplit.c ft_strlen.c \
 										ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c ft_strncat.c \
 										ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strstr.c ft_strnstr.c \
-										ft_strcmp.c ft_strncmp.c get_next_line.c ) \
+										ft_strcmp.c ft_strncmp.c ft_get_file_size.c ft_read_file.c \
+										get_next_line.c ) \
 		$(addprefix $(PRINT_SRC_DIR)/,	ft_putchar_fd.c ft_show_binary.c ft_make_coffee.c ft_putchar.c \
 										ft_putstr.c ft_putendl.c ft_putnbr.c ft_putstr_fd.c \
 										ft_putendl_fd.c ft_putnbr_fd.c ) \
