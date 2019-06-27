@@ -11,8 +11,8 @@
 # **************************************************************************** #
 
 NAME = libft.a
-
-FLAGS = -Wall -Wextra -Werror
+#-Wall -Wextra -Werror
+FLAGS = 
 
 INC_DIR = -I ./inc
 
@@ -22,7 +22,8 @@ MATH_SRC_DIR	=	./$(SRC_DIR)/math
 PRINT_SRC_DIR	=	./$(SRC_DIR)/print
 FT_PRINTF_SRC_DIR = ./$(PRINT_SRC_DIR)/ft_printf
 
-SRC_C = $(addprefix $(MATH_SRC_DIR)/,	ft_map.c ft_vectors.c ft_math_small_fnc.c ft_solve_quadric.c ft_rand.c) \
+SRC_C = $(addprefix $(MATH_SRC_DIR)/,	ft_map.c ft_vectors.c ft_math_small_fnc.c ft_solve_quadric.c ft_rand.c \
+										ft_matrix.c ft_standart_matrix.c ) \
 		$(addprefix $(STRING_SRC_DIR)/,	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 										ft_is_wspace.c ft_toupper.c ft_tolower.c ft_itoa.c ft_atoi16.c \
 										ft_bzero.c ft_count_words.c ft_atoi.c ft_memset.c ft_memalloc.c \
@@ -40,12 +41,12 @@ SRC_C = $(addprefix $(MATH_SRC_DIR)/,	ft_map.c ft_vectors.c ft_math_small_fnc.c 
 		$(addprefix $(FT_PRINTF_SRC_DIR)/, ft_printf.c print_format.c parse_format.c handle_token.c \
 										utils.c print_sc_type.c print_d_type.c print_o_type.c \
 										print_u_type.c print_x_type.c print_p_type.c print_f_type.c \
-										ft_putfloat.c )
+										ft_putfloat.c print_v_type.c print_m_type.c )
 
 
 SRC_O = $(SRC_C:.c=.o)
 
-CC = clang
+CC = clang -g
 
 .PHONY: all multi
 

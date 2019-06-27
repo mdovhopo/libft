@@ -16,7 +16,7 @@ static const char		g_flags[] = "-+#0 ";
 static const t_fmask	g_flags_mask[] = {
 	F_MINUS, F_PLUS, F_HASH, F_ZERO, F_SPACE
 };
-static const char		g_types[] = "cspdiouxXf%";
+static const char		g_types[] = "cspdiouxXf%vm";
 static const char		*g_mods[] = { "h", "hh", "l", "ll", "L" };
 static const t_fmask	g_mods_mask[] = {
 	F_SHORT, F_SHORTSHORT, F_LONG,

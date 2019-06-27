@@ -27,7 +27,9 @@ static uint32_t (*g_type_handlers[])(t_token*, va_list*) = {
 	&type_x,
 	&type_x,
 	&type_f,
-	&type_c
+	&type_c,
+	&type_v,
+	&type_m
 };
 
 uint32_t		handle_token(t_token *token, va_list *ap)

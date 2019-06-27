@@ -13,6 +13,7 @@
 #ifndef MATHFT_H
 # define MATHFT_H
 
+# define _USE_MATH_DEFINES
 # include <math.h>
 # include <stdint.h>
 
@@ -97,5 +98,21 @@ float			mix(float a, float b, float mix);
 
 float	ft_rand(void);
 int		ft_rand_range(int lo, int hi);
+
+/*
+** Matrix
+*/
+
+mat4	mat_mult(mat4 m1, mat4 m2);
+vec4	mat_mult_vec(mat4 m, vec4 v);
+
+/*
+** Make standart matrix of type
+*/
+
+mat4	mat_identity(void);
+mat4	mat_scale(vec4 v);
+mat4	mat_translation(vec4 v);
+
 
 #endif

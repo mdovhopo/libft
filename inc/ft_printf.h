@@ -75,6 +75,11 @@ uint32_t		type_o(t_token *token, va_list *ap);
 uint32_t		type_u(t_token *token, va_list *ap);
 uint32_t		type_x(t_token *token, va_list *ap);
 uint32_t		type_f(t_token *token, va_list *ap);
+uint32_t		type_v(t_token *token, va_list *ap);
+uint32_t		type_m(t_token *token, va_list *ap);
+
+uint32_t		type_f_custom_param(t_token *token, void *param);
+uint32_t		type_v_custom_param(t_token *token, void *param);
 
 /*
 ** Utils

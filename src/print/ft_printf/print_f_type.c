@@ -60,3 +60,26 @@ uint32_t		type_f(t_token *token, va_list *ap)
 			ft_putchar(' ');
 	return (MAX(token->width, len + sign));
 }
+
+uint32_t		type_f_custom_param(t_token *token, void *param)
+{
+	float		n;
+	int			len;
+	int			i;
+	int			sign;
+
+	n = *(float*)param;
+	sign = ((token->flags & F_PLUS) || token->flags & F_SPACE || n < 0) ? 1 : 0;
+	if (token->prec == -1)
+		token->prec = 6;
+	len = int_len((uint64_t)fabsl(n), 10) + token->prec
+											+ (token->prec == 0 ? 0 : 1);
+	print_num_prefix(token, n, len);
+	ft_putfloat(n, token->prec);
+	i = -1;
+	if (token->flags & F_MINUS)
+		while (++i < token->width - len
+							- (token->flags & F_PLUS || n < 0 ? 1 : 0))
+			ft_putchar(' ');
+	return (MAX(token->width, len + sign));
+}
