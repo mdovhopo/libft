@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/31 16:18:44 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/06/29 16:37:09 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ typedef enum	e_axis
 ** 	   mat(d)4 - 16 float/float array that represents 4x4 component matrix
 */
 
-# define VEC4  typedef float __attribute__((vector_size(16)))	vec4;
-# define VECD4 typedef float __attribute__((vector_size(32)))	vecd4;
-# define MAT4  typedef float __attribute__((vector_size(64)))	mat4;
-# define MATD4 typedef float __attribute__((vector_size(128)))	matd4;
+# define VEC4  typedef float	__attribute__((vector_size(16)))	vec4;
+# define VECD4 typedef double	__attribute__((vector_size(32)))	vecd4;
+# define MAT4  typedef float	__attribute__((vector_size(64)))	mat4;
+# define MATD4 typedef double	__attribute__((vector_size(128)))	matd4;
 
 VEC4
 VECD4
@@ -140,5 +140,11 @@ mat4	mat_rotate_x(mat4 m, float angle);
 mat4	mat_rotate_y(mat4 m, float angle);
 mat4	mat_rotate_z(mat4 m, float angle);
 mat4	mat_rotate(mat4 m, vec4 r, float angle);
+
+/*
+** Projection Matrices
+*/
+
+mat4	mat_perspective(float fov, float far, float near);
 
 #endif
