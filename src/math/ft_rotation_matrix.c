@@ -59,16 +59,18 @@ mat4	mat_rotate_z(mat4 m, float angle)
 }
 
 /*
-** Rotation around r by angle
+** Rotation around axis by angle
 */
 
-mat4	mat_rotate(mat4 m, vec4 r, float angle)
+mat4	mat_rotate(mat4 m, vec4 axis, float angle)
 {
 	mat4	rot;
+	vec4	r;
 	float	c;
 	float	s;
 	float	c_inv;
 
+	r = vec_unit(axis);
 	c = cos(angle);
 	s = sin(angle);
 	c_inv = 1 - c;
@@ -76,12 +78,15 @@ mat4	mat_rotate(mat4 m, vec4 r, float angle)
 	rot[0] = c + r[0] * r[0] * c_inv;
 	rot[1] = r[0] * r[1] * c_inv - r[2] * s;
 	rot[2] = r[0] * r[2] * c_inv + r[1] * s;
+	
 	rot[4] = r[1] * r[0] * c_inv + r[2] * s;
 	rot[5] = c + r[1] * r[1] * c_inv;
 	rot[6] = r[1] * r[2] * c_inv - r[0] * s;
+
 	rot[8] = r[2] * r[0] * c_inv - r[1] * s;
 	rot[9] = r[2] * r[1] * c_inv + r[0] * s;
 	rot[10] = c + r[2] * r[2] * c_inv;
+	
 	rot[15] = 1;
 	return (mat_mult(m, rot));
 }

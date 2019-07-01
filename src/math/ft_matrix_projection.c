@@ -11,22 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
 ** fov in degrees
 */
 
-mat4	mat_perspective(float fov, float far, float near)
+mat4	mat_perspective(float fov, float aspect, float near, float far)
 {
 	mat4	out;
 	float	scale;
 
 	ft_bzero(&out, sizeof(mat4));
-	scale = 1 / tan(DEG_TO_RAD(fov / 2));
-	out[0] = scale;
-	out[5] = scale;
-	out[10] = - (far / (far - near));
+	scale = tan(DEG_TO_RAD(fov / 2));
+	out[0] = 1 / (scale * aspect);
+	out[5] = 1 / scale;
+	out[10] = - far / (far - near);
 	out[11] = -1;
-	out[14] = - (far * near / (far - near));
+	out[14] = - far * near / (far - near);
+	ft_printf("%m", out);
 	return (out);
 }

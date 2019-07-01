@@ -145,6 +145,6 @@ mat4	mat_rotate(mat4 m, vec4 r, float angle);
 ** Projection Matrices
 */
 
-mat4	mat_perspective(float fov, float far, float near);
+mat4	mat_perspective(float fov, float aspect, float near, float far);
 
 #endif

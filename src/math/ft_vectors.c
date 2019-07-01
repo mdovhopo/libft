@@ -30,11 +30,12 @@ vec4	vec_cross(vec4 v1, vec4 v2)
 
 vec4	vec_unit(vec4 v)
 {
+	float l = sqrt(vec_dot(v, v)); 
 	return ((vec4){
-		v[X] * (1 / sqrt(vec_dot(v, v))),
-		v[Y] * (1 / sqrt(vec_dot(v, v))),
-		v[Z] * (1 / sqrt(vec_dot(v, v))),
-		v[A] * (1 / sqrt(vec_dot(v, v)))
+		v[X] / (l),
+		v[Y] / (l),
+		v[Z] / (l),
+		v[A] / (l)
 	});
 }
 
