@@ -30,7 +30,23 @@ t_mat4	mat_perspective(float fov, float aspect, float near, float far)
 	return (out);
 }
 
-// t_mat4	mat_ortho(float r, float l, float t, float b, float near, float far)
-// {
+/*
+** rlbt is a vector with left right top botton values
+*/
 
-// }
+// TODO make it work :3
+
+t_mat4	mat_ortho(t_vec4 lrtb, float near, float far)
+{
+	t_mat4 out;
+
+	ft_bzero(&out, sizeof(t_mat4));
+	out[0] = 2.0f / (lrtb[1] - lrtb[0]);
+	out[3] = - (lrtb[1] + lrtb[0]) / (lrtb[1] - lrtb[0]);
+	out[5] = 2.0f / (lrtb[2] - lrtb[3]);
+	out[7] = - (lrtb[2] + lrtb[3]) / (lrtb[2] - lrtb[3]);
+	out[10] = -2.0f / (far - near);
+	out[11] = - (far + near) / (far - near);
+	out[15] = 1.0f;
+	return (out);
+}

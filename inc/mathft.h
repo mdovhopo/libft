@@ -53,20 +53,15 @@ typedef enum	e_axis
 }				t_axis;
 
 /*
-** I had to define this types this way, due to 42 norminette
-** so, vec(d)4 - 4  float/double array that represents 4   component vector
-** 	   mat(d)4 - 16 float/double array that represents 4x4 component matrix
+** this matrix is written in row major order
+** vec(d)4 - 4  float/double array that represents 4   component vector
+** mat(d)4 - 16 float/double array that represents 4x4 component matrix
 */
 
-# define VEC4  typedef float	__attribute__((vector_size(16)))	t_vec4;
-# define VECD4 typedef double	__attribute__((vector_size(32)))	vecd4;
-# define MAT4  typedef float	__attribute__((vector_size(64)))	t_mat4;
-# define MATD4 typedef double	__attribute__((vector_size(128)))	matd4;
-
-VEC4
-VECD4
-MAT4
-MATD4
+typedef float	__attribute__((vector_size(16)))	t_vec4;
+typedef double	__attribute__((vector_size(32)))	t_vecd4;
+typedef float	__attribute__((vector_size(64)))	t_mat4;
+typedef double	__attribute__((vector_size(128)))	t_matd4;
 
 /*
 ** basic vector constructor
@@ -119,32 +114,33 @@ float			mix(float a, float b, float mix);
 ** random number generation
 */
 
-float	ft_rand(void);
-int		ft_rand_range(int lo, int hi);
+float			ft_rand(void);
+int				ft_rand_range(int lo, int hi);
 
 /*
 ** Matrix
 */
 
-t_mat4	mat_mult(t_mat4 m1, t_mat4 m2);
-t_vec4	mat_mult_vec(t_mat4 m, t_vec4 v);
+t_mat4			mat_mult(t_mat4 m1, t_mat4 m2);
+t_vec4			mat_mult_vec(t_mat4 m, t_vec4 v);
 
 /*
 ** Mutate matrix
 */
 
-t_mat4	mat_identity(void);
-t_mat4	mat_scale(t_mat4 m, t_vec4 v);
-t_mat4	mat_translate(t_mat4 m, t_vec4 v);
-t_mat4	mat_rotate_x(t_mat4 m, float angle);
-t_mat4	mat_rotate_y(t_mat4 m, float angle);
-t_mat4	mat_rotate_z(t_mat4 m, float angle);
-t_mat4	mat_rotate(t_mat4 m, t_vec4 r, float angle);
+t_mat4			mat_identity(void);
+t_mat4			mat_scale(t_mat4 m, t_vec4 v);
+t_mat4			mat_translate(t_mat4 m, t_vec4 v);
+t_mat4			mat_rotate_x(t_mat4 m, float angle);
+t_mat4			mat_rotate_y(t_mat4 m, float angle);
+t_mat4			mat_rotate_z(t_mat4 m, float angle);
+t_mat4			mat_rotate(t_mat4 m, t_vec4 r, float angle);
 
 /*
 ** Projection Matrices
 */
 
-t_mat4	mat_perspective(float fov, float aspect, float near, float far);
+t_mat4			mat_perspective(float fov, float asp, float near, float far);
+t_mat4			mat_ortho(t_vec4 rlbt, float near, float far);
 
 #endif
