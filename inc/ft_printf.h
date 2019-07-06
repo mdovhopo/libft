@@ -107,6 +107,7 @@ void			set_arg_with_mods(t_token *token, int64_t *arg, va_list *ap);
 void			set_u_arg_with_mods(t_token *token, uint64_t *arg, va_list *ap);
 void			print_base_int64(int64_t n, int64_t base, int lower_case);
 void			print_sign(t_token *token, int64_t arg);
+void			print_sign_float(t_token *token, long double arg);
 void			ft_putfloat(long double n, uint32_t prec);
 
 #endif

@@ -2,15 +2,15 @@
 
 uint32_t	type_m(t_token *token, va_list *ap)
 {
-	mat4		m;
+	t_mat4		m;
 	int32_t		i;
 	int32_t		j;
-	vec4		tmp_arg;
+	t_vec4		tmp_arg;
 	uint32_t	len;
 
 	len = 4;
 	i = -1;
-	m = (mat4)va_arg(*ap, mat4);
+	m = (t_mat4)va_arg(*ap, t_mat4);
 	while(++i < 4)
 	{
 		j = i * 4;

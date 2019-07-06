@@ -1,13 +1,13 @@
 #include "libft.h"
 
-mat4	mat_mult(mat4 m1, mat4 m2)
+t_mat4	mat_mult(t_mat4 m1, t_mat4 m2)
 {
 	int32_t	i;
 	int32_t	j;
 	int32_t	k;
-	mat4	m;
+	t_mat4	m;
 
-	ft_bzero(&m, sizeof(mat4));
+	ft_bzero(&m, sizeof(t_mat4));
 	i = -1;
 	while (++i < 4)
 	{
@@ -22,13 +22,13 @@ mat4	mat_mult(mat4 m1, mat4 m2)
 	return (m);
 }
 
-vec4	mat_mult_vec(mat4 m, vec4 v)
+t_vec4	mat_mult_vec(t_mat4 m, t_vec4 v)
 {
-	vec4	out;
+	t_vec4	out;
 	int32_t	i;
 	int32_t	k;
 
-	ft_bzero(&out, sizeof(vec4));
+	ft_bzero(&out, sizeof(t_vec4));
 	i = -1;
 	while (++i < 4)
 	{

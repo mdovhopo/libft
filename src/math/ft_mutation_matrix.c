@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-mat4	mat_identity()
+t_mat4	mat_identity()
 {
-	mat4 m;
+	t_mat4 m;
 
-	ft_bzero(&m, sizeof(mat4));
+	ft_bzero(&m, sizeof(t_mat4));
 	m[0] = 1;
 	m[5] = 1;
 	m[10] = 1;
@@ -24,11 +24,11 @@ mat4	mat_identity()
 	return (m);
 }
 
-mat4	mat_scale(mat4 m, vec4 v)
+t_mat4	mat_scale(t_mat4 m, t_vec4 v)
 {
-	mat4 scale;
+	t_mat4 scale;
 
-	ft_bzero(&scale, sizeof(mat4));
+	ft_bzero(&scale, sizeof(t_mat4));
 	scale[0] = v[0];
 	scale[5] = v[1];
 	scale[10] = v[2];
@@ -36,9 +36,9 @@ mat4	mat_scale(mat4 m, vec4 v)
 	return (mat_mult(m, scale));
 }
 
-mat4	mat_translate(mat4 m, vec4 v)
+t_mat4	mat_translate(t_mat4 m, t_vec4 v)
 {
-	mat4 trans;
+	t_mat4 trans;
 
 	trans = mat_identity();
 	trans[3] = v[0];

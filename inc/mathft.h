@@ -41,8 +41,8 @@
 ** Angle transformation
 */
 
-# define RAD_TO_DEG(angle) (angle * (180.0f / M_PI))
-# define DEG_TO_RAD(angle) (angle * (M_PI / 180.0f))
+# define RAD_TO_DEG(angle) (angle * 180.0f / M_PI)
+# define DEG_TO_RAD(angle) (angle * M_PI / 180.0f)
 
 typedef enum	e_axis
 {
@@ -54,13 +54,13 @@ typedef enum	e_axis
 
 /*
 ** I had to define this types this way, due to 42 norminette
-** so, vec(d)4 - 4  float/float array that represents 4   component vector
-** 	   mat(d)4 - 16 float/float array that represents 4x4 component matrix
+** so, vec(d)4 - 4  float/double array that represents 4   component vector
+** 	   mat(d)4 - 16 float/double array that represents 4x4 component matrix
 */
 
-# define VEC4  typedef float	__attribute__((vector_size(16)))	vec4;
+# define VEC4  typedef float	__attribute__((vector_size(16)))	t_vec4;
 # define VECD4 typedef double	__attribute__((vector_size(32)))	vecd4;
-# define MAT4  typedef float	__attribute__((vector_size(64)))	mat4;
+# define MAT4  typedef float	__attribute__((vector_size(64)))	t_mat4;
 # define MATD4 typedef double	__attribute__((vector_size(128)))	matd4;
 
 VEC4
@@ -72,12 +72,12 @@ MATD4
 ** basic vector constructor
 */
 
-# define VEC(x, y, z, w) ((vec4){x, y, z, w})
+# define VEC(x, y, z, w) ((t_vec4){x, y, z, w})
 
 typedef union	u_color
 {
 	uint32_t	c;
-	vec4		argb;
+	t_vec4		argb;
 }				t_color;
 
 void			ft_show_binary(unsigned int x);
@@ -87,32 +87,32 @@ void			ft_show_binary(unsigned int x);
 ** (witch returns) to range b[X] - b[Y]
 */
 
-float			ft_map(float s, vec4 a, vec4 b);
+float			ft_map(float s, t_vec4 a, t_vec4 b);
 
 /*
 ** vector calculations
 */
 
-float			vec_dot(vec4 v1, vec4 v2);
-vec4			vec_cross(vec4 v1, vec4 v2);
-vec4			vec_clamp(float lo, float hi, vec4 v);
-float			vec_mag(vec4 v);
+float			vec_dot(t_vec4 v1, t_vec4 v2);
+t_vec4			vec_cross(t_vec4 v1, t_vec4 v2);
+t_vec4			vec_clamp(float lo, float hi, t_vec4 v);
+float			vec_mag(t_vec4 v);
 
 /*
 ** same as normilizing vector
 */
 
-vec4			vec_unit(vec4 v);
+t_vec4			vec_unit(t_vec4 v);
 
 /*
 ** for comparing vectors magnitude.
 ** it performs better because you won't use sqrt
 */
 
-float			vec_mag_squared(vec4 v);
+float			vec_mag_squared(t_vec4 v);
 
 float			clamp(float lo, float hi, float v);
-vec4			ft_solve_qudric(vec4 params);
+t_vec4			ft_solve_qudric(t_vec4 params);
 float			mix(float a, float b, float mix);
 
 /*
@@ -126,25 +126,25 @@ int		ft_rand_range(int lo, int hi);
 ** Matrix
 */
 
-mat4	mat_mult(mat4 m1, mat4 m2);
-vec4	mat_mult_vec(mat4 m, vec4 v);
+t_mat4	mat_mult(t_mat4 m1, t_mat4 m2);
+t_vec4	mat_mult_vec(t_mat4 m, t_vec4 v);
 
 /*
 ** Mutate matrix
 */
 
-mat4	mat_identity(void);
-mat4	mat_scale(mat4 m, vec4 v);
-mat4	mat_translate(mat4 m, vec4 v);
-mat4	mat_rotate_x(mat4 m, float angle);
-mat4	mat_rotate_y(mat4 m, float angle);
-mat4	mat_rotate_z(mat4 m, float angle);
-mat4	mat_rotate(mat4 m, vec4 r, float angle);
+t_mat4	mat_identity(void);
+t_mat4	mat_scale(t_mat4 m, t_vec4 v);
+t_mat4	mat_translate(t_mat4 m, t_vec4 v);
+t_mat4	mat_rotate_x(t_mat4 m, float angle);
+t_mat4	mat_rotate_y(t_mat4 m, float angle);
+t_mat4	mat_rotate_z(t_mat4 m, float angle);
+t_mat4	mat_rotate(t_mat4 m, t_vec4 r, float angle);
 
 /*
 ** Projection Matrices
 */
 
-mat4	mat_perspective(float fov, float aspect, float near, float far);
+t_mat4	mat_perspective(float fov, float aspect, float near, float far);
 
 #endif

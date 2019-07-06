@@ -15,18 +15,22 @@
 ** fov in degrees
 */
 
-mat4	mat_perspective(float fov, float aspect, float near, float far)
+t_mat4	mat_perspective(float fov, float aspect, float near, float far)
 {
-	mat4	out;
+	t_mat4	out;
 	float	scale;
 
-	ft_bzero(&out, sizeof(mat4));
-	scale = tan(DEG_TO_RAD(fov / 2));
+	ft_bzero(&out, sizeof(t_mat4));
+	scale = tan(fov / 2);
 	out[0] = 1 / (scale * aspect);
 	out[5] = 1 / scale;
-	out[10] = - far / (far - near);
-	out[11] = -1;
-	out[14] = - far * near / (far - near);
-	ft_printf("%m", out);
+	out[10] = (far + near) / (near - far);
+	out[11] = (2 * far * near) / (near - far);
+	out[14] = -1 ;
 	return (out);
 }
+
+// t_mat4	mat_ortho(float r, float l, float t, float b, float near, float far)
+// {
+
+// }

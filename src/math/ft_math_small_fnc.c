@@ -17,9 +17,9 @@ float	clamp(float lo, float hi, float v)
 	return (fmax(lo, fmin(hi, v)));
 }
 
-vec4	vec_clamp(float lo, float hi, vec4 v)
+t_vec4	vec_clamp(float lo, float hi, t_vec4 v)
 {
-	return ((vec4){
+	return ((t_vec4){
 		clamp(lo, hi, v[X]),
 		clamp(lo, hi, v[Y]),
 		clamp(lo, hi, v[Z]),

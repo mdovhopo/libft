@@ -19,7 +19,7 @@
 ** VEC(x1, x2, 1)
 */
 
-vec4		ft_solve_qudric(vec4 params)
+t_vec4		ft_solve_qudric(t_vec4 params)
 {
 	float	disc;
 	float	a;

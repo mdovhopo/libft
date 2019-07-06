@@ -27,7 +27,7 @@ static void		print_num_prefix(t_token *token, long double n, int len)
 
 	i = -1;
 	if (token->flags & F_ZERO)
-		print_sign(token, (int64_t)n);
+		print_sign_float(token, n);
 	if (n > 0 && (token->flags & F_SPACE) && !(token->flags & F_PLUS))
 		ft_putchar(' ');
 	if (!(token->flags & F_MINUS))
@@ -35,7 +35,7 @@ static void		print_num_prefix(t_token *token, long double n, int len)
 								- (token->flags & F_PLUS || n < 0 ? 1 : 0))
 			ft_putchar(token->flags & F_ZERO ? '0' : ' ');
 	if (!(token->flags & F_ZERO))
-		print_sign(token, (int64_t)n);
+		print_sign_float(token, n);
 }
 
 uint32_t		type_f(t_token *token, va_list *ap)

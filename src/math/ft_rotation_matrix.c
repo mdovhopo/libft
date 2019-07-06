@@ -16,11 +16,11 @@
 ** Angle in radians
 */
 
-mat4	mat_rotate_x(mat4 m, float angle)
+t_mat4	mat_rotate_x(t_mat4 m, float angle)
 {
-	mat4	rot;
+	t_mat4	rot;
 
-	ft_bzero(&rot, sizeof(mat4));
+	ft_bzero(&rot, sizeof(t_mat4));
 	rot[0] = 1;
 	rot[5] = cos(angle);
 	rot[6] = -sin(angle);
@@ -30,11 +30,11 @@ mat4	mat_rotate_x(mat4 m, float angle)
 	return (mat_mult(m, rot));
 }
 
-mat4	mat_rotate_y(mat4 m, float angle)
+t_mat4	mat_rotate_y(t_mat4 m, float angle)
 {
-	mat4	rot;
+	t_mat4	rot;
 
-	ft_bzero(&rot, sizeof(mat4));
+	ft_bzero(&rot, sizeof(t_mat4));
 	rot[0] = cos(angle);
 	rot[2] = sin(angle);
 	rot[5] = 1;
@@ -44,11 +44,11 @@ mat4	mat_rotate_y(mat4 m, float angle)
 	return (mat_mult(m, rot));
 }
 
-mat4	mat_rotate_z(mat4 m, float angle)
+t_mat4	mat_rotate_z(t_mat4 m, float angle)
 {
-	mat4	rot;
+	t_mat4	rot;
 
-	ft_bzero(&rot, sizeof(mat4));
+	ft_bzero(&rot, sizeof(t_mat4));
 	rot[0] = cos(angle);
 	rot[1] = -sin(angle);
 	rot[4] = -rot[1];
@@ -62,10 +62,10 @@ mat4	mat_rotate_z(mat4 m, float angle)
 ** Rotation around axis by angle
 */
 
-mat4	mat_rotate(mat4 m, vec4 axis, float angle)
+t_mat4	mat_rotate(t_mat4 m, t_vec4 axis, float angle)
 {
-	mat4	rot;
-	vec4	r;
+	t_mat4	rot;
+	t_vec4	r;
 	float	c;
 	float	s;
 	float	c_inv;
@@ -74,7 +74,7 @@ mat4	mat_rotate(mat4 m, vec4 axis, float angle)
 	c = cos(angle);
 	s = sin(angle);
 	c_inv = 1 - c;
-	ft_bzero(&rot, sizeof(mat4));
+	ft_bzero(&rot, sizeof(t_mat4));
 	rot[0] = c + r[0] * r[0] * c_inv;
 	rot[1] = r[0] * r[1] * c_inv - r[2] * s;
 	rot[2] = r[0] * r[2] * c_inv + r[1] * s;

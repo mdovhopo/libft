@@ -63,3 +63,13 @@ void			print_sign(t_token *token, int64_t arg)
 	if (arg < 0)
 		ft_putchar('-');
 }
+
+void			print_sign_float(t_token *token, long double arg)
+{
+	if (token->flags & F_PLUS)
+		if (arg >= 0)
+			ft_putchar('+');
+	if (arg < 0)
+		ft_putchar('-');
+}
+
