@@ -34,7 +34,7 @@ t_mat4	mat_perspective(float fov, float aspect, float near, float far)
 ** rlbt is a vector with left right top botton values
 */
 
-// TODO make it work :3
+// TODO make it works :3
 
 t_mat4	mat_ortho(t_vec4 lrtb, float near, float far)
 {
@@ -49,4 +49,33 @@ t_mat4	mat_ortho(t_vec4 lrtb, float near, float far)
 	out[11] = - (far + near) / (far - near);
 	out[15] = 1.0f;
 	return (out);
+}
+
+t_mat4	mat_look_at(t_vec4 pos, t_vec4 target, t_vec4 up)
+{
+	t_mat4 rot;
+	t_mat4 translate;
+	t_vec4 cam_dir;
+	t_vec4 cam_right;
+	t_vec4 cam_up;
+	int i;
+
+	rot = mat_identity();
+	translate = mat_identity();
+	cam_dir = vec_unit(pos - target);
+	cam_right = vec_unit(vec_cross(up, cam_dir));
+	cam_up = vec_cross(cam_dir, cam_right);
+	i = -1;
+	translate[3] = -pos[0];
+	translate[7] = -pos[1];
+	translate[11] = -pos[2];
+	while (++i < 3)
+		rot[i] = cam_right[i];
+	i = -1;
+	while (++i < 3)
+		rot[4 + i] = cam_up[i];
+	i = -1;
+	while(++i < 3)
+		rot[8 + i] = cam_dir[i];
+	return (mat_mult(rot, translate));
 }

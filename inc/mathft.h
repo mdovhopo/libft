@@ -67,7 +67,8 @@ typedef double	__attribute__((vector_size(128)))	t_matd4;
 ** basic vector constructor
 */
 
-# define VEC(x, y, z, w) ((t_vec4){x, y, z, w})
+# define VEC(x, y, z, w)	((t_vec4){x, y, z, w})
+# define VEC3(x, y, z) 		((t_vec4){x, y, z, 1.0f})
 
 typedef union	u_color
 {
@@ -142,5 +143,11 @@ t_mat4			mat_rotate(t_mat4 m, t_vec4 r, float angle);
 
 t_mat4			mat_perspective(float fov, float asp, float near, float far);
 t_mat4			mat_ortho(t_vec4 rlbt, float near, float far);
+
+/*
+** Camera stuff
+*/
+
+t_mat4			mat_look_at(t_vec4 pos, t_vec4 target, t_vec4 up);
 
 #endif
