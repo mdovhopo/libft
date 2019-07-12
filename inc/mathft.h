@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mathft.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/06/29 16:37:09 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/07/11 23:02:03 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,12 @@ typedef float	__attribute__((vector_size(64)))	t_mat4;
 typedef double	__attribute__((vector_size(128)))	t_matd4;
 
 /*
-** basic vector constructor
+** basic vector constructors
 */
 
 # define VEC(x, y, z, w)	((t_vec4){x, y, z, w})
 # define VEC3(x, y, z) 		((t_vec4){x, y, z, 1.0f})
+# define VEC2(x, y) 		((t_vec4){x, y, 0.0f, 0.0f})
 
 typedef union	u_color
 {
