@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:30:39 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 14:50:07 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/07/28 17:10:51 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,7 @@
 # include "gnl.h"
 # include "mathft.h"
 # include "ft_printf.h"
-
-/*
-** dealing with memory
-*/
-
-void			*ft_memset(void *s, int c, size_t n);
-void			ft_bzero(void *s, size_t n);
-void			*ft_memcpy(void *dst,
-					const void *src, size_t n);
-void			*ft_memccpy(void *dst,
-					const void *src, int c, size_t n);
-void			*ft_memmove(void *dst, const void *src, size_t len);
-void			*ft_memchr(const void *s, int c, size_t n);
-int				ft_memcmp (const void *s1, const void *s2, size_t n);
-void			*ft_memalloc(size_t size);
-void			ft_memdel(void **ap);
+# include "ft_memory.h"
 
 /*
 ** string processing fuctions
