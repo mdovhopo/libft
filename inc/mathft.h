@@ -6,7 +6,7 @@
 /*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/07/11 23:02:03 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/03 02:36:37 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,12 @@ typedef enum	e_axis
 
 /*
 ** this matrix is written in row major order
-** vec(d)4 - 4  float/double array that represents 4   component vector
-** mat(d)4 - 16 float/double array that represents 4x4 component matrix
+** vec(d|i)4  4  float/double/int array that represents 4   component vector
+** mat(d)4 - 16  float/double     array that represents 4x4 component matrix
 */
 
 typedef float	__attribute__((vector_size(16)))	t_vec4;
+typedef int		__attribute__((vector_size(16)))	t_veci4;
 typedef double	__attribute__((vector_size(32)))	t_vecd4;
 typedef float	__attribute__((vector_size(64)))	t_mat4;
 typedef double	__attribute__((vector_size(128)))	t_matd4;
@@ -70,6 +71,8 @@ typedef double	__attribute__((vector_size(128)))	t_matd4;
 # define VEC(x, y, z, w)	((t_vec4){x, y, z, w})
 # define VEC3(x, y, z) 		((t_vec4){x, y, z, 1.0f})
 # define VEC2(x, y) 		((t_vec4){x, y, 0.0f, 0.0f})
+
+# define VECI3(x, y, z)		((t_veci4){x, y, z, 1});
 
 typedef union	u_color
 {

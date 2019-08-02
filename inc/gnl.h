@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gnl.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:45 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/26 13:56:33 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/03 02:11:06 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,21 @@ typedef struct	s_gnl
 }				t_gnl;
 
 /*
-** reads 1 line from fd per call and asign line to **line
+** reads 1 line from fd per call and assign line to **line
 ** @return: 1 - if line was read
 **			0 - if file ended
 **			-1 - on error
 */
 
 int				get_next_line(const int fd, char **line);
+
+/*
+** reads 1 line from file_name per call and assign it to **line
+** @return: 1 - if line was read
+**			0 - if file ended
+**			-1 - on error
+*/
+
+int				ft_read_next_line(const char *name, char **line);
 
 #endif
