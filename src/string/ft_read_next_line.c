@@ -6,7 +6,7 @@
 /*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 01:43:55 by tryckylake        #+#    #+#             */
-/*   Updated: 2019/08/03 02:43:48 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/03 12:31:34 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ int			ft_read_next_line(const char *file_name, char **line)
 	static size_t	file_pointer = 0;
 	size_t			line_size;
 
+	if (file_pointer > file_size)
+	{
+		free(file_data);
+		return (0);
+	}
 	if (file_size < 0) {
 		file_size = ft_get_file_size(file_name);
 		if (file_size < 0)
@@ -39,14 +44,9 @@ int			ft_read_next_line(const char *file_name, char **line)
 		file_data[line_size + file_pointer] && 
 		file_data[line_size + file_pointer] != '\n')
 		line_size++;
-	*line = (char*)malloc(line_size + 1);
+	*line = (char*)malloc(sizeof(char) * (line_size + 1));
 	(*line)[line_size] = '\0';
 	ft_memcpy(*line, file_data + file_pointer, line_size);
 	file_pointer += line_size + 1;
-	if (file_pointer > file_size)
-	{
-		free(file_data);
-		return (0);
-	}
 	return (1);
 }
