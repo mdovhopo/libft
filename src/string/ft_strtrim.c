@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdovhopo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 17:02:48 by mdovhopo          #+#    #+#             */
-/*   Updated: 2018/11/07 21:55:04 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/05 14:38:47 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static unsigned int		st(const char *s)
 	unsigned int i;
 
 	i = 0;
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+	while (ft_is_wspace(s[i]))
 		i++;
 	return (i);
 }
@@ -27,7 +27,7 @@ static int				e(const char *s)
 	unsigned int i;
 
 	i = ft_strlen(s) - 1;
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+	while (ft_is_wspace(s[i]))
 		i--;
 	return (i);
 }
