@@ -6,7 +6,7 @@
 /*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:30:39 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/07/28 17:10:51 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/07 14:45:45 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <fcntl.h>
 # include <sys/stat.h>
 # include <stdbool.h>
+# include <time.h>
 
 # include "gnl.h"
 # include "mathft.h"
@@ -94,5 +95,12 @@ int				ft_is_wspace(int c);
 
 ssize_t			ft_get_file_size(const char *path);
 char			*ft_read_file(const char *path);
+
+/*
+** Time utils
+*/
+
+void			ft_time_start();
+void			ft_time_end(const char *name);
 
 #endif

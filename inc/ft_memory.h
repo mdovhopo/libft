@@ -6,7 +6,7 @@
 /*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 17:09:26 by tryckylake        #+#    #+#             */
-/*   Updated: 2019/07/28 17:26:26 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/07 15:45:37 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define MEMORY_H
 
 # include <stdlib.h>
+
+# define WORD_SIZE sizeof(int64_t)
 
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
