@@ -6,7 +6,7 @@
 /*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/27 14:12:57 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/07 15:56:48 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/07 17:23:53 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,3 @@ void		*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return dst;
 }
-

@@ -6,7 +6,7 @@
 /*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/03 14:50:45 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/21 14:52:22 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ typedef	uint32_t	t_veci3[3];
 # define VEC2(x, y) 		((t_vec4){x, y, 0.0f, 0.0f})
 
 # define VECI3(x, y, z)		((t_veci3){x, y, z});
+
+# define FLOAT_TO_VEC(n)		((t_vec4){n, n, n, 1.0f})
 
 typedef union	u_color
 {
@@ -154,5 +156,11 @@ t_mat4			mat_ortho(t_vec4 rlbt, float near, float far);
 */
 
 t_mat4			mat_look_at(t_vec4 pos, t_vec4 target, t_vec4 up);
+
+/*
+** Calculate normals
+*/
+
+t_vec4			ft_get_triangle_normal(t_vec4 *edges);
 
 #endif

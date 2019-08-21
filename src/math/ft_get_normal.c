@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_get_normal.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/27 12:28:09 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/07 17:05:01 by tryckylake       ###   ########.fr       */
+/*   Created: 2019/08/21 14:46:41 by tryckylake        #+#    #+#             */
+/*   Updated: 2019/08/21 16:29:40 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+t_vec4	ft_get_triangle_normal(t_vec4 *edges)
 {
-	size_t			i;
-	char			*s;
-	unsigned char	c1;
+	t_vec4	v1;
+	t_vec4	v2;
 
-	c1 = (unsigned char)c;
-	s = (char *)b;
-	i = 0;
-	while (i < len)
-	{
-		s[i] = c1;
-		i++;
-	}
-	return (b);
+	v1 = edges[1] - edges[0];
+	v2 = edges[2] - edges[0];  
+	return vec_cross(v1, v2);
 }
