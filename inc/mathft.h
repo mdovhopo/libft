@@ -6,7 +6,7 @@
 /*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/21 14:52:22 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/23 14:29:52 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ t_vec4			vec_unit(t_vec4 v);
 float			vec_mag_squared(t_vec4 v);
 
 float			clamp(float lo, float hi, float v);
+float			loop(float lo, float hi, float v);
 t_vec4			ft_solve_qudric(t_vec4 params);
 float			mix(float a, float b, float mix);
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_math_small_fnc.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:48:41 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 14:41:08 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/23 14:28:42 by tryckylake       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,13 @@ t_vec4	vec_clamp(float lo, float hi, t_vec4 v)
 float	mix(float a, float b, float mix)
 {
 	return (b * mix + a * (1 - mix));
+}
+
+float	loop(float lo, float hi, float v)
+{
+	if (v > hi)
+		return lo;
+	else if (v < lo)
+		return hi;
+	return v;
 }
