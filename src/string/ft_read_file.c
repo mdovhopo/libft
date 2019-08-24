@@ -6,15 +6,17 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/24 16:12:35 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/24 16:12:49 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 17:54:01 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*error_report(const char *msg)
+#define ERR_MSG RED"ERROR: "RESET
+
+static void	*error_report(const char *msg, const char *name)
 {
-	ft_printf("read_file error [%s]\n", msg);
+	ft_printf("%s %s\n", msg, name);
 	return (NULL);
 }
 
@@ -25,14 +27,14 @@ char		*ft_read_file(const char *path)
 	int			fd;
 
 	if ((file_size = ft_get_file_size(path)) < 0)
-		return (error_report("Could not get file size :("));
+		return (error_report(ERR_MSG"Could not get file size", path));
 	if ((buffer = (char*)malloc(file_size + 1)) == NULL)
-		return (error_report("Could not alloc memory :("));
+		return (error_report(ERR_MSG"Could not alloc memory", path));
 	buffer[file_size] = 0;
 	if ((fd = open(path, O_RDONLY)) < 0)
-		return (error_report("Could not open file :("));
+		return (error_report(ERR_MSG"Could not open file", path));
 	if (read(fd, buffer, file_size) < 0)
-		return (error_report("Could not read from file :("));
+		return (error_report(ERR_MSG"Could not read from file", path));
 	close(fd);
 	return (buffer);
 }

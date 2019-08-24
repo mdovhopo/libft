@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+         #
+#    By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2019/08/05 15:50:57 by tryckylake       ###   ########.fr        #
+#    Updated: 2019/08/24 16:18:05 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
