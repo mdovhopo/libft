@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 14:57:59 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 14:48:48 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 16:13:23 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,3 @@ void			print_sign_float(t_token *token, long double arg)
 	if (arg < 0)
 		ft_putchar('-');
 }
-

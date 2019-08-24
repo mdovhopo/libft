@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 15:10:19 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/06/29 15:10:21 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 16:07:26 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,15 +78,12 @@ t_mat4	mat_rotate(t_mat4 m, t_vec4 axis, float angle)
 	rot[0] = c + r[0] * r[0] * c_inv;
 	rot[1] = r[0] * r[1] * c_inv - r[2] * s;
 	rot[2] = r[0] * r[2] * c_inv + r[1] * s;
-	
 	rot[4] = r[1] * r[0] * c_inv + r[2] * s;
 	rot[5] = c + r[1] * r[1] * c_inv;
 	rot[6] = r[1] * r[2] * c_inv - r[0] * s;
-
 	rot[8] = r[2] * r[0] * c_inv - r[1] * s;
 	rot[9] = r[2] * r[1] * c_inv + r[0] * s;
 	rot[10] = c + r[2] * r[2] * c_inv;
-	
 	rot[15] = 1;
 	return (mat_mult(m, rot));
 }

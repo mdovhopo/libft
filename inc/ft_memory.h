@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memory.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 17:09:26 by tryckylake        #+#    #+#             */
-/*   Updated: 2019/08/07 15:45:37 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/24 15:38:48 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MEMORY_H
-# define MEMORY_H
+#ifndef FT_MEMORY_H
+# define FT_MEMORY_H
 
 # include <stdlib.h>
 
@@ -33,11 +33,8 @@ int		ft_memcmp (const void *s1, const void *s2, size_t n);
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
-void	*ft_array_push(	void *arr,
+void	*ft_array_push(void *arr,
 						void *elem,
 						uint32_t elem_size,
 						uint32_t arr_len);
-
-
-
 #endif

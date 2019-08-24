@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_math_small_fnc.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:48:41 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/23 14:28:42 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/24 16:02:16 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ float	mix(float a, float b, float mix)
 float	loop(float lo, float hi, float v)
 {
 	if (v > hi)
-		return lo;
+		return (lo);
 	else if (v < lo)
-		return hi;
-	return v;
+		return (hi);
+	return (v);
 }

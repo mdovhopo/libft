@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_m_type.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/24 16:14:02 by mdovhopo          #+#    #+#             */
+/*   Updated: 2019/08/24 16:14:14 by mdovhopo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 uint32_t	type_m(t_token *token, va_list *ap)
@@ -11,7 +23,7 @@ uint32_t	type_m(t_token *token, va_list *ap)
 	len = 4;
 	i = -1;
 	m = (t_mat4)va_arg(*ap, t_mat4);
-	while(++i < 4)
+	while (++i < 4)
 	{
 		j = i * 4;
 		tmp_arg = VEC(m[j], m[j + 1], m[j + 2], m[j + 3]);

@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:23:45 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 14:41:06 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 16:07:09 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ t_vec4	vec_cross(t_vec4 v1, t_vec4 v2)
 
 t_vec4	vec_unit(t_vec4 v)
 {
-	float l = sqrt(vec_dot(v, v)); 
+	float l;
+
+	l = sqrt(vec_dot(v, v));
 	return ((t_vec4){
 		v[X] / (l),
 		v[Y] / (l),

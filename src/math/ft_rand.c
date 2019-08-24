@@ -6,17 +6,17 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:05:18 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/31 16:29:41 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 16:03:39 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 /*
 ** \@return - random value 0.0f - 1.0f
 */
 
-float	ft_rand()
+float	ft_rand(void)
 {
 	int	fd;
 	int	rand;
@@ -24,7 +24,7 @@ float	ft_rand()
 	fd = open("/dev/random", O_RDONLY);
 	read(fd, &rand, sizeof(int));
 	close(fd);
-	return ((rand / ((float)INT32_MAX) + 1 )/ 2);
+	return ((rand / ((float)INT32_MAX) + 1) / 2);
 }
 
 /*

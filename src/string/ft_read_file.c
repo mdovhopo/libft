@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_read_file.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/24 16:12:35 by mdovhopo          #+#    #+#             */
+/*   Updated: 2019/08/24 16:12:49 by mdovhopo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static void	*error_report(const char *msg)
 {
 	ft_printf("read_file error [%s]\n", msg);
-	return NULL;
+	return (NULL);
 }
 
 char		*ft_read_file(const char *path)

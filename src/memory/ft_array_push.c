@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_array_push.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 17:21:13 by tryckylake        #+#    #+#             */
-/*   Updated: 2019/08/03 02:29:26 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/24 16:14:39 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_array_push(
 	if (mem != NULL)
 	{
 		ft_memcpy(mem + arr_size, elem, elem_size);
-		return mem;
+		return (mem);
 	}
 	mem = malloc(realloc_size);
 	if (mem != NULL)

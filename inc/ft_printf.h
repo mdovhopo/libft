@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 17:22:48 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/24 14:43:59 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 15:44:53 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@
 ** You always need to RESET the color!
 */
 
-#define RED   "\x1B[31m"
-#define GRN   "\x1B[32m"
-#define YEL   "\x1B[33m"
-#define BLU   "\x1B[34m"
-#define MAG   "\x1B[35m"
-#define CYN   "\x1B[36m"
-#define WHT   "\x1B[37m"
-#define RESET "\x1B[0m"
+# define RED   "\x1B[31m"
+# define GRN   "\x1B[32m"
+# define YEL   "\x1B[33m"
+# define BLU   "\x1B[34m"
+# define MAG   "\x1B[35m"
+# define CYN   "\x1B[36m"
+# define WHT   "\x1B[37m"
+# define RESET "\x1B[0m"
 
 # define STD_NULL_MSG "(null)"
 

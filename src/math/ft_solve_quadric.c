@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:51:16 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/05/11 14:54:51 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 16:06:36 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,9 @@ t_vec4		ft_solve_qudric(t_vec4 params)
 	disc = b * b - 4 * a * c;
 	if (disc < 0)
 		return (VEC(0, 0, -1, 0));
-	return (VEC((-b + sqrt(disc)) / (2 * a), (-b - sqrt(disc)) / (2 * a), 1, 0));
+	return (VEC(
+		(-b + sqrt(disc)) / (2 * a),
+		(-b - sqrt(disc)) / (2 * a),
+		1,
+		0));
 }

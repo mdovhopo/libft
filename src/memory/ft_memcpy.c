@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/27 14:12:57 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/24 15:19:52 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 16:14:24 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ void		*ft_memcpy(void *dst, const void *src, size_t n)
 		shift = n / WORD_SIZE * WORD_SIZE;
 		copy_bytes(dst + shift, src + shift, n % WORD_SIZE);
 	}
-	return dst;
+	return (dst);
 }

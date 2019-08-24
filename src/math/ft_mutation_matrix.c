@@ -6,13 +6,13 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 15:10:26 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/06/29 15:10:27 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/24 16:04:00 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_mat4	mat_identity()
+t_mat4	mat_identity(void)
 {
 	t_mat4 m;
 
