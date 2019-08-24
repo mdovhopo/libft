@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tryckylake <tryckylake@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/27 14:12:57 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/07 17:23:53 by tryckylake       ###   ########.fr       */
+/*   Updated: 2019/08/24 15:19:52 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void		*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	shift;
 
-	if (n > WORD_SIZE)
+	if (n >= WORD_SIZE)
 		copy_word(dst, src, n);
 	if (n % WORD_SIZE > 0)
 	{
