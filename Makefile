@@ -6,13 +6,13 @@
 #    By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/26 16:19:10 by mdovhopo          #+#    #+#              #
-#    Updated: 2019/08/24 16:18:05 by mdovhopo         ###   ########.fr        #
+#    Updated: 2019/08/25 17:32:06 by mdovhopo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-#-Wall -Wextra -Werror
-FLAGS = 
+
+FLAGS = -Wall -Wextra -Werror
 
 INC_DIR = -I ./inc
 

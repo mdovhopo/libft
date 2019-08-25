@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/27 14:12:57 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/24 16:14:24 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/25 17:33:44 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	copy_word(void *dst, const void *src, size_t n)
 {
-	size_t		max;
+	int32_t		max;
 	int32_t		i;
 	long long	*d;
 	long long	*s;
