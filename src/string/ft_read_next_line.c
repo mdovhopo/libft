@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 01:43:55 by tryckylake        #+#    #+#             */
-/*   Updated: 2019/08/25 17:32:59 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/08/25 17:55:25 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@ int			ft_read_next_line(const char *file_name, char **line)
 	static int32_t	file_pointer = 0;
 	size_t			line_size;
 
-	if (file_pointer > file_size)
-	{
-		free(file_data);
-		return (0);
-	}
 	if (file_data == NULL)
 		file_data = ft_read_file(file_name);
 	if (file_size < 0)
 		if ((file_size = ft_get_file_size(file_name)) < 0)
 			return (-1);
+	if (file_pointer > file_size)
+	{
+		free(file_data);
+		return (0);
+	}
 	line_size = 0;
 	while (
 		file_data[line_size + file_pointer] &&
