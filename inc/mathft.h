@@ -6,7 +6,7 @@
 /*   By: mdovhopo <mdovhopo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 13:06:52 by mdovhopo          #+#    #+#             */
-/*   Updated: 2019/08/24 15:43:49 by mdovhopo         ###   ########.fr       */
+/*   Updated: 2019/09/08 16:27:07 by mdovhopo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,6 +162,6 @@ t_mat4			mat_look_at(t_vec4 pos, t_vec4 target, t_vec4 up);
 ** Calculate normals
 */
 
-t_vec4			ft_get_triangle_normal(t_vec4 *edges);
+t_vec4			ft_get_triangle_normal(t_vec4 v0, t_vec4 v1, t_vec4 v2);
 
 #endif
